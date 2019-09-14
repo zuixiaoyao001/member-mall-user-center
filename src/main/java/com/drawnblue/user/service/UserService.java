@@ -13,4 +13,8 @@ public class UserService {
     public User selectById(Long id) {
         return this.userMapper.selectByPrimaryKey(id);
     }
+
+    public User findByMobileOrEmail(User user){
+        return this.userMapper.findByMobileOrEmail(user);
+    }
 }
